@@ -1,10 +1,13 @@
 import './sass/main.scss';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import SimpleLightbox from "simplelightbox";
+// Дополнительный импорт стилей
+import "simplelightbox/dist/simple-lightbox.min.css";
+import  './js/fetch'
+// import './js/r-get'
+// import './js/c-post'
+// import './js/u-patch'
+// import './js/d-delete'
 console.log('hallo');
 
-const params = new URLSearchParams({
-    _limit: 2,
-    // Change the group number here
-    _page: 2
-  });
 
-fetch(`https://restcountries.com/v3.1/name?${params}`)

@@ -1,0 +1,143 @@
+{
+  "books": [
+    {
+      "title": "The Last Kingdom",
+      "author": "Bernard Cornwell",
+      "rating": 8.38,
+      "id": 1,
+      "qwe": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "title": "На берегу спокойных вод",
+      "author": "Роберт Шекли",
+      "rating": 8.51,
+      "id": 2,
+      "qwe": [
+        "s",
+        "g",
+        "c"
+      ]
+    },
+    {
+      "title": "Сон смешного человека",
+      "author": "Федор Достоевский",
+      "rating": 7.75,
+      "id": 3,
+      "qwe": [
+        "sdfg",
+        "ghjk",
+        "cvbnm"
+      ]
+    },
+    {
+      "title": "hallo world",
+      "author": "я",
+      "rating": 4,
+      "qwe": [
+        "mmm"
+      ],
+      "id": 4
+    },
+    {
+      "title": "БОЛЬШАЯ КНИГА",
+      "author": "я",
+      "rating": 10,
+      "qwe": [
+        "vvvvvvv"
+      ],
+      "id": 5
+    },
+    {
+      "title": "hallo world",
+      "author": "я",
+      "rating": 4,
+      "qwe": [
+        "s1",
+        "g1",
+        "у1"
+      ],
+      "id": 6
+    },
+    {
+      "title": "Тестовая книга",
+      "author": "я",
+      "rating": 10,
+      "qwe": [
+        "s1",
+        "g1",
+        "у1"
+      ],
+      "id": 8
+    },
+    {
+      "title": "Тестовая книга",
+      "author": "я",
+      "rating": 10,
+      "qwe": [
+        "s1",
+        "g1",
+        "у1"
+      ],
+      "id": 9
+    },
+    {
+      "title": "Тестовая книга",
+      "author": "я",
+      "rating": 10,
+      "qwe": [
+        "s1",
+        "g1",
+        "у1"
+      ],
+      "id": 10
+    },
+    {
+      "title": "Тестовая книга",
+      "author": "я",
+      "rating": 10,
+      "qwe": [
+        "s1",
+        "g1",
+        "у1"
+      ],
+      "id": 11
+    },
+    {
+      "title": "Тестовая книга",
+      "author": "я",
+      "rating": 10,
+      "qwe": [
+        "s1",
+        "g1",
+        "у1"
+      ],
+      "id": 12
+    },
+    {
+      "title": "Тестовая книга",
+      "author": "я",
+      "rating": 10,
+      "qwe": [
+        "s1",
+        "g1",
+        "у1"
+      ],
+      "id": 13
+    },
+    {
+      "title": "Тестовая книга",
+      "author": "я",
+      "rating": 10,
+      "qwe": [
+        "s1",
+        "g1",
+        "у1"
+      ],
+      "id": 14
+    }
+  ]
+}
