@@ -1,3 +1,14 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+b {
+  margin: 0;
+  padding: 0;
+}
+
+/* styles for heder search*/
 .container{
   background-color: blue;
   padding: 5px;
@@ -6,6 +17,7 @@
 
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 form {
@@ -38,3 +50,134 @@ button {
   width: 44px;
   height: 44px;
 }
+
+/* styles for gallery*/
+
+.gallery {
+  padding-top: 70px;
+  display: grid;
+  max-width: 1440px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: 270px;
+  grid-gap: 12px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery__image:hover {
+  transform: scale(1.03);
+}
+
+.gallery__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--animation-duration) var(--timing-function);
+}
+
+/* styles for card set*/
+.info {
+  padding: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  color: #fff;
+  background: rgba(0,0,0,0.8);
+  font-size: 1rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-card{
+  position: relative;
+}
+
+/* loader */
+
+.loader {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loader.show {
+  opacity: 1;
+}
+
+.loader div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: blue;
+  animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.loader div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.loader div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.loader div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+
+@keyframes loader {
+  0% {
+      top: 8px;
+      height: 64px;
+  }
+
+  50%,
+  100% {
+      top: 24px;
+      height: 32px;
+  }
+}
+
+/* lazyload */
+
+.blur-up {
+  filter: blur(5px);
+  transition: filter 400ms;
+}
+
+.blur-up.lazyloaded {
+  filter: blur(0);
+}
+
+
+
+/* test */
+
+// .a{
+//   height: 60px;
+//   background-color: #4654e1;
+//   margin: 15px;
+//   border: 1px solid red;
+//   transition: 150ms;
+//   opacity: 0;
+//   transform: translateX(100px);
+// }
+// .show{
+//    transform: translateX(0);
+//    opacity: 1;
+// }
+ 

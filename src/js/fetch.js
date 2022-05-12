@@ -1,18 +1,32 @@
-import axios from 'axios'
-const BASE_URL_MY = 'http://localhost:3000/books'
-const BASE_URL = 'https://pixabay.com/api/'
-const KEY = '23788919-1e868a4f1ae72234cc449d190'
+import axios from 'axios';
+import { refs } from './refs';
+import {clearGallery} from '../index';
+import {success} from './reactions';
+const BASE_URL = 'https://pixabay.com/api/';
+const KEY = '23788919-1e868a4f1ae72234cc449d190';
+const photo = 'photo';
+const orientation = 'horizontal';
+const safesearch = true;
+const per_page = 40;
 
+let page = 12;
+let inputUser = '';
 
-axios.get(`${BASE_URL_MY}`)
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .then(function () {
-    // always executed
-  });
+async function fetchData(){
+  if(inputUser !== refs.input.value){
+    clearGallery();
+    page = 12;
+  };
+  inputUser = refs.input.value;
+  const url = `${BASE_URL}?key=${KEY}&q=${inputUser}&image_type=${photo}&orientation=${orientation}&safesearch=${safesearch}&per_page=${per_page}&page=${page}`;
+  const response = await axios.get(url);
+  if(page === 12 && response.data.totalHits !== 0){
+    success(response.data.totalHits);
+  };
+  page += 1;
+
+  return response;
+};
+
+export {fetchData};
+
