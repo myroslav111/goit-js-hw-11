@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { refs } from './refs';
 import {clearGallery} from '../index';
-import {success} from './reactions';
+import {success, visibleAnimation} from './reactions';
 const BASE_URL = 'https://pixabay.com/api/';
 const KEY = '23788919-1e868a4f1ae72234cc449d190';
 const photo = 'photo';
@@ -15,8 +15,7 @@ let inputUser = '';
 async function fetchData(){
   if(inputUser !== refs.input.value){
     clearGallery();
-    refs.svg.classList.remove('hide-animation')
-    refs.form.classList.remove('gradient-border')
+    visibleAnimation();
     page = 1;
   };
   inputUser = refs.input.value;

@@ -17,4 +17,14 @@ function success(totalHits){
   Notify.success(`Hooray! We found ${totalHits} images.`);
 };
 
-export {hideLoader, showLoader, err, success};
+function hideAnimation(){
+  refs.svg.classList.add('hide-animation');
+  refs.form.classList.add('gradient-border');
+};
+
+function visibleAnimation(){
+  refs.svg.classList.remove('hide-animation');
+  refs.form.classList.remove('gradient-border');
+};
+
+export {hideLoader, showLoader, err, success, visibleAnimation, hideAnimation};

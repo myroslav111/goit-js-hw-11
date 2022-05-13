@@ -1,16 +1,13 @@
 import './sass/main.scss';
-
-import hbsNewCard from './templates/new-cards.hbs'
 import hbsCard from './templates/card.hbs'
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 import { fetchData} from './js/fetch';
 import  './js/fetch'
 import {refs} from './js/refs'
-
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
-import {hideLoader, showLoader, err, success} from './js/reactions'
+import {hideLoader, showLoader, err, visibleAnimation, hideAnimation} from './js/reactions'
 import {observeOnLastElOfGallery} from './js/infinitScroll'
 
 // captionsData :'alt',
@@ -28,8 +25,7 @@ async function getPicture(){
     const promisFromFetch = await fetchData()
     const markup = hbsCard(promisFromFetch.data.hits)
     refs.gallery.insertAdjacentHTML("beforeend", markup);
-    refs.svg.classList.add('hide-animation');
-    refs.form.classList.add('gradient-border')
+    hideAnimation()
 
     gallery.refresh()  
     observeOnLastElOfGallery(refs.gallery.querySelectorAll('.photo-card'))
@@ -43,8 +39,7 @@ async function getPicture(){
         
         case false:
           err('Sorry, there are no images matching your search query. Please try again.')
-          refs.svg.classList.remove('hide-animation')
-          refs.form.classList.remove('gradient-border')
+          visibleAnimation()
           break
 
          default:
