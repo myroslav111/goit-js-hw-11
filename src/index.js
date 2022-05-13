@@ -13,8 +13,8 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import {hideLoader, showLoader, err, success} from './js/reactions'
 import {observeOnLastElOfGallery} from './js/infinitScroll'
 
-
-let gallery = new SimpleLightbox('.gallery a', {captionsData :'alt', captionDelay: 250});
+// captionsData :'alt',
+let gallery = new SimpleLightbox('.gallery a', { captionDelay: 250, widthRatio: 0.95, heightRatio: 0.95});
 refs.form.addEventListener('submit', onFormSubmit)
 
 // фун. отрисовки DOM
