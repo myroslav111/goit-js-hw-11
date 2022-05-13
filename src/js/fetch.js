@@ -15,6 +15,7 @@ let inputUser = '';
 async function fetchData(){
   if(inputUser !== refs.input.value){
     clearGallery();
+    refs.svg.classList.remove('hide-animation')
     page = 1;
   };
   inputUser = refs.input.value;

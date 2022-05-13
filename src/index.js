@@ -19,13 +19,16 @@ refs.form.addEventListener('submit', onFormSubmit)
 
 // фун. отрисовки DOM
 async function getPicture(){
+  
   showLoader()
+  
   setTimeout(async () =>{
 
     try{
     const promisFromFetch = await fetchData()
     const markup = hbsCard(promisFromFetch.data.hits)
     refs.gallery.insertAdjacentHTML("beforeend", markup);
+    refs.svg.classList.add('hide-animation');
 
     gallery.refresh()  
     observeOnLastElOfGallery(refs.gallery.querySelectorAll('.photo-card'))
@@ -39,6 +42,7 @@ async function getPicture(){
         
         case false:
           err('Sorry, there are no images matching your search query. Please try again.')
+          refs.svg.classList.remove('hide-animation')
           break
 
          default:
@@ -46,6 +50,7 @@ async function getPicture(){
       }
     } finally {
       hideLoader();
+      
   }
   }, 2000)
 

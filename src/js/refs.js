@@ -4,7 +4,8 @@ const refs = {
     input: document.querySelector('input'),
     buttonSearch: document.querySelector('button[data-button="data-btn"]'),
     buttonLoadMore: document.querySelector('.load-more'),
-    loader: document.querySelector('.loader')
+    loader: document.querySelector('.loader'),
+    svg: document.querySelector('.svg')
 };
 
 export {refs};
