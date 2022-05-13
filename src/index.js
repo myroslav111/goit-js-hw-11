@@ -29,6 +29,7 @@ async function getPicture(){
     const markup = hbsCard(promisFromFetch.data.hits)
     refs.gallery.insertAdjacentHTML("beforeend", markup);
     refs.svg.classList.add('hide-animation');
+    refs.form.classList.add('gradient-border')
 
     gallery.refresh()  
     observeOnLastElOfGallery(refs.gallery.querySelectorAll('.photo-card'))
@@ -43,6 +44,7 @@ async function getPicture(){
         case false:
           err('Sorry, there are no images matching your search query. Please try again.')
           refs.svg.classList.remove('hide-animation')
+          refs.form.classList.remove('gradient-border')
           break
 
          default:

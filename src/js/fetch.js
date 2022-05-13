@@ -16,6 +16,7 @@ async function fetchData(){
   if(inputUser !== refs.input.value){
     clearGallery();
     refs.svg.classList.remove('hide-animation')
+    refs.form.classList.remove('gradient-border')
     page = 1;
   };
   inputUser = refs.input.value;
