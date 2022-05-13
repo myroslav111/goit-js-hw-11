@@ -1,6 +1,6 @@
 import './sass/main.scss';
 
-
+import hbsNewCard from './templates/new-cards.hbs'
 import hbsCard from './templates/card.hbs'
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
@@ -47,7 +47,7 @@ async function getPicture(){
     } finally {
       hideLoader();
   }
-  }, 1000)
+  }, 2000)
 
 }
 
