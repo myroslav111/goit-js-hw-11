@@ -1,0 +1,41 @@
+/* styles for heder search*/
+.container{
+    background-color: transparent;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  form {
+    background-color: white;
+    width: 450px;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  input {
+    all: unset;
+    font: 16px system-ui;
+    color: black;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+  }
+  
+  ::placeholder {
+    color: #7a807c;
+    opacity: 0.7; 
+  }
+  
+  button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+  }

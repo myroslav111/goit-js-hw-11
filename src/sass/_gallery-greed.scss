@@ -1,0 +1,27 @@
+/* styles for gallery 1*/
+
+.gallery {
+    padding-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: grid;
+    max-width: 1440px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-auto-rows: 270px;
+    grid-gap: 12px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .gallery__image:hover {
+    transform: scale(1.03);
+  }
+  
+  .gallery__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform var(--animation-duration) var(--timing-function);
+  }
+  

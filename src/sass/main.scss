@@ -4,4 +4,10 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
-@import './example';
+@import './background-style';
+@import './component/border-input-style';
+@import './component/lazyload';
+@import './component/loader';
+@import './component/card-styles';
+@import './gallery-greed';
+@import './form';
